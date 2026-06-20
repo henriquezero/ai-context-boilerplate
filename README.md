@@ -4,6 +4,9 @@ Templates to standardize the context that each repository offers to AI agents (C
 
 This repository does **not** contain ready-made rules. It contains **prompts/templates** that, once copied into a target repository and executed by the AI, generate the context documentation specific to that repository.
 
+<img width="1845" height="1833" alt="image" src="https://github.com/user-attachments/assets/6c013ccd-89fd-4b84-a451-56f7b8d3e06f" />
+
+
 ## Why this repo exists
 
 Today each IDE/agent reads a different file:
