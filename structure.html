@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI context structure — Boilerplate</title>
+<style>
+  :root{
+    --font-sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    --font-mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+    --color-text-primary:#23211d;
+    --color-text-secondary:#6f6a62;
+    --color-border-secondary:#e3e0d8;
+    --color-border-tertiary:#d9d5cc;
+    --color-bg-secondary:#faf9f5;
+    --page:#f1efe8;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --color-text-primary:#ece9e3;
+      --color-text-secondary:#a8a39a;
+      --color-border-secondary:#3a3833;
+      --color-border-tertiary:#46433d;
+      --color-bg-secondary:#26241f;
+      --page:#1b1a16;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:32px;background:var(--page);font-family:var(--font-sans);
+       display:flex;justify-content:center;align-items:flex-start;min-height:100vh}
+  .wrap{width:100%;max-width:1080px}
+  svg{width:100%;height:auto;display:block}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+           clip:rect(0,0,0,0);white-space:nowrap;border:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h2 class="sr-only">Boilerplate structure: AGENTS.md is the source of truth at the root; five bridge files redirect to it; the ai-context folder holds ARCHITECTURE.md, CONVENTIONS.md, RUNBOOK.md and the rules folder with task-approach, definition-of-done, canonical-files and security.</h2>
+  <svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ttl desc" font-family="var(--font-sans,'Inter',system-ui,sans-serif)">
+    <title id="ttl">AI context structure — boilerplate</title>
+    <desc id="desc">AGENTS.md is the source of truth at the root; five bridge files redirect to it; the ai-context folder holds ARCHITECTURE.md, CONVENTIONS.md, RUNBOOK.md and the rules folder (task-approach, definition-of-done, canonical-files, security). Names in English.</desc>
+
+    <style>
+      .mono{font-family:var(--font-mono,ui-monospace,Menlo,monospace);}
+      .ink{fill:var(--color-text-primary,#23211d);}
+      .mut{fill:var(--color-text-secondary,#6f6a62);}
+      .src{fill:#C25B3F;}
+      .brg{fill:#8a7f78;}
+      .ctx{fill:#2E7D74;}
+    </style>
+
+    <!-- header -->
+    <text x="42" y="68" class="ink" font-size="37" font-weight="800" letter-spacing="-0.5">AI CONTEXT STRUCTURE</text>
+    <text x="43" y="100" class="mut" font-size="18">Boilerplate · what gets created in your repository</text>
+    <text x="1040" y="48" class="mut mono" font-size="13" text-anchor="end">ai-context-boilerplate</text>
+    <line x1="40" y1="132" x2="1040" y2="132" stroke="var(--color-border-secondary,#e3e0d8)" stroke-width="1.5"/>
+
+    <!-- section labels -->
+    <text x="42" y="172" class="mut" font-size="13" font-weight="700" letter-spacing="2">REPOSITORY TREE</text>
+    <text x="472" y="172" class="mut" font-size="13" font-weight="700" letter-spacing="2">WHAT EACH PART DOES</text>
+
+    <!-- ===== LEFT: tree panel ===== -->
+    <rect x="40" y="188" width="400" height="703" rx="16" fill="var(--color-bg-secondary,#faf9f5)" stroke="var(--color-border-secondary,#e3e0d8)" stroke-width="1.5"/>
+
+    <!-- connectors -->
+    <g stroke="var(--color-border-tertiary,#d9d5cc)" stroke-width="1.4" stroke-linecap="round" opacity="0.95">
+      <!-- root -> level1 -->
+      <line x1="84" y1="305" x2="84" y2="541"/>
+      <line x1="84" y1="310" x2="92" y2="310"/>
+      <line x1="84" y1="343" x2="92" y2="343"/>
+      <line x1="84" y1="376" x2="92" y2="376"/>
+      <line x1="84" y1="409" x2="92" y2="409"/>
+      <line x1="84" y1="442" x2="92" y2="442"/>
+      <line x1="84" y1="475" x2="92" y2="475"/>
+      <line x1="84" y1="541" x2="92" y2="541"/>
+      <!-- .github -> copilot -->
+      <line x1="110" y1="475" x2="110" y2="508"/>
+      <line x1="110" y1="508" x2="118" y2="508"/>
+      <!-- ai-context -> level2 -->
+      <line x1="110" y1="541" x2="110" y2="673"/>
+      <line x1="110" y1="574" x2="118" y2="574"/>
+      <line x1="110" y1="607" x2="118" y2="607"/>
+      <line x1="110" y1="640" x2="118" y2="640"/>
+      <line x1="110" y1="673" x2="118" y2="673"/>
+      <!-- rules -> children -->
+      <line x1="136" y1="673" x2="136" y2="838"/>
+      <line x1="136" y1="706" x2="144" y2="706"/>
+      <line x1="136" y1="739" x2="144" y2="739"/>
+      <line x1="136" y1="772" x2="144" y2="772"/>
+      <line x1="136" y1="805" x2="144" y2="805"/>
+      <line x1="136" y1="838" x2="144" y2="838"/>
+    </g>
+
+    <!-- tree text -->
+    <g class="mono" font-size="14.5">
+      <text x="66"  y="282" class="ink" font-weight="700">your-repository/</text>
+      <text x="96"  y="315" class="src" font-weight="700">AGENTS.md</text>
+      <text x="96"  y="348" class="brg">CLAUDE.md</text>
+      <text x="96"  y="381" class="brg">GEMINI.md</text>
+      <text x="96"  y="414" class="brg">.cursorrules</text>
+      <text x="96"  y="447" class="brg">.windsurfrules</text>
+      <text x="96"  y="480" class="mut" font-weight="600">.github/</text>
+      <text x="122" y="513" class="brg">copilot-instructions.md</text>
+      <text x="96"  y="546" class="ctx" font-weight="700">ai-context/</text>
+      <text x="122" y="579" class="ctx">ARCHITECTURE.md</text>
+      <text x="122" y="612" class="ctx">CONVENTIONS.md</text>
+      <text x="122" y="645" class="ctx">RUNBOOK.md</text>
+      <text x="122" y="678" class="ctx" font-weight="700">rules/</text>
+      <text x="148" y="711" class="ctx" fill-opacity="0.82">task-approach.md</text>
+      <text x="148" y="744" class="ctx" fill-opacity="0.82">definition-of-done.md</text>
+      <text x="148" y="777" class="ctx" fill-opacity="0.82">canonical-files.md</text>
+      <text x="148" y="810" class="ctx" fill-opacity="0.82">security.md</text>
+      <text x="148" y="843" class="ctx" fill-opacity="0.82">commit-format.md</text>
+    </g>
+
+    <!-- ===== RIGHT: cards ===== -->
+    <g>
+      <rect x="470" y="188" width="570" height="108" rx="14" fill="var(--color-bg-secondary,#faf9f5)" stroke="var(--color-border-secondary,#e3e0d8)" stroke-width="1.5"/>
+      <rect x="476" y="204" width="6" height="76" rx="3" fill="#C25B3F"/>
+      <text x="500" y="222" class="ink" font-size="18" font-weight="700">AGENTS.md</text>
+      <text x="500" y="243" class="src" font-size="11" font-weight="700" letter-spacing="1.2">SOURCE OF TRUTH · ALWAYS-ON</text>
+      <text x="500" y="266" font-size="13.5"><tspan class="src" font-weight="700">✓ </tspan><tspan class="mut">Short index, read on every interaction</tspan></text>
+      <text x="500" y="285" font-size="13.5"><tspan class="src" font-weight="700">✓ </tspan><tspan class="mut">Native in Codex, Cursor and OpenCode</tspan></text>
+    </g>
+    <g>
+      <rect x="470" y="307" width="570" height="108" rx="14" fill="var(--color-bg-secondary,#faf9f5)" stroke="var(--color-border-secondary,#e3e0d8)" stroke-width="1.5"/>
+      <rect x="476" y="323" width="6" height="76" rx="3" fill="#8a7f78"/>
+      <text x="500" y="341" class="ink" font-size="18" font-weight="700">Bridge files</text>
+      <text x="500" y="362" class="brg" font-size="11" font-weight="700" letter-spacing="1.2">5 BRIDGES → AGENTS.MD</text>
+      <text x="500" y="385" font-size="13"><tspan class="brg" font-weight="700">✓ </tspan><tspan class="mut">CLAUDE · GEMINI · .cursorrules · .windsurfrules · Copilot</tspan></text>
+      <text x="500" y="404" font-size="13.5"><tspan class="brg" font-weight="700">✓ </tspan><tspan class="mut">Same context in any tool</tspan></text>
+    </g>
+    <g>
+      <rect x="470" y="426" width="570" height="108" rx="14" fill="var(--color-bg-secondary,#faf9f5)" stroke="var(--color-border-secondary,#e3e0d8)" stroke-width="1.5"/>
+      <rect x="476" y="442" width="6" height="76" rx="3" fill="#2E7D74"/>
+      <text x="500" y="460" class="ink" font-size="18" font-weight="700">ai-context/</text>
+      <text x="500" y="481" class="ctx" font-size="11" font-weight="700" letter-spacing="1.2">CONTEXT LAYER</text>
+      <text x="500" y="504" font-size="13.5"><tspan class="ctx" font-weight="700">✓ </tspan><tspan class="mut">Loaded by instruction — no auto-load dependency</tspan></text>
+      <text x="500" y="523" font-size="13.5"><tspan class="ctx" font-weight="700">✓ </tspan><tspan class="mut">Dense; read once at session start</tspan></text>
+    </g>
+    <g>
+      <rect x="470" y="545" width="570" height="108" rx="14" fill="var(--color-bg-secondary,#faf9f5)" stroke="var(--color-border-secondary,#e3e0d8)" stroke-width="1.5"/>
+      <rect x="476" y="561" width="6" height="76" rx="3" fill="#2E7D74"/>
+      <text x="500" y="579" class="ink" font-size="17" font-weight="700">ARCHITECTURE.md + CONVENTIONS.md</text>
+      <text x="500" y="600" class="ctx" font-size="11" font-weight="700" letter-spacing="1.2">SYSTEM AND CODE</text>
+      <text x="500" y="623" font-size="13.5"><tspan class="ctx" font-weight="700">✓ </tspan><tspan class="mut">Architecture: layers, decisions, integrations</tspan></text>
+      <text x="500" y="642" font-size="13.5"><tspan class="ctx" font-weight="700">✓ </tspan><tspan class="mut">Conventions: the project's code patterns</tspan></text>
+    </g>
+    <g>
+      <rect x="470" y="664" width="570" height="108" rx="14" fill="var(--color-bg-secondary,#faf9f5)" stroke="var(--color-border-secondary,#e3e0d8)" stroke-width="1.5"/>
+      <rect x="476" y="680" width="6" height="76" rx="3" fill="#2E7D74"/>
+      <text x="500" y="698" class="ink" font-size="18" font-weight="700">ai-context/rules/</text>
+      <text x="500" y="719" class="ctx" font-size="11" font-weight="700" letter-spacing="1.2">DETAILED BEHAVIOR</text>
+      <text x="500" y="742" font-size="12.5"><tspan class="ctx" font-weight="700">✓ </tspan><tspan class="mut mono">task-approach · definition-of-done · canonical-files · security</tspan></text>
+      <text x="500" y="761" font-size="13.5"><tspan class="ctx" font-weight="700">✓ </tspan><tspan class="mut">Modular; keeps AGENTS.md lean</tspan></text>
+    </g>
+    <g>
+      <rect x="470" y="783" width="570" height="108" rx="14" fill="var(--color-bg-secondary,#faf9f5)" stroke="var(--color-border-secondary,#e3e0d8)" stroke-width="1.5"/>
+      <rect x="476" y="799" width="6" height="76" rx="3" fill="#2E7D74"/>
+      <text x="500" y="817" class="ink" font-size="18" font-weight="700">RUNBOOK.md</text>
+      <text x="500" y="838" class="ctx" font-size="11" font-weight="700" letter-spacing="1.2">HOW TO RUN THE PROJECT</text>
+      <text x="500" y="861" font-size="13.5"><tspan class="ctx" font-weight="700">✓ </tspan><tspan class="mut">Build, dev, lint, type-check, run a single test</tspan></text>
+      <text x="500" y="880" font-size="13.5"><tspan class="ctx" font-weight="700">✓ </tspan><tspan class="mut">Migrations, seed and environment variables</tspan></text>
+    </g>
+
+    <!-- ===== footer legend ===== -->
+    <rect x="40" y="958" width="1000" height="86" rx="14" fill="var(--color-bg-secondary,#faf9f5)" stroke="var(--color-border-secondary,#e3e0d8)" stroke-width="1.5"/>
+    <g font-size="13.5">
+      <circle cx="68" cy="990" r="6" fill="#C25B3F"/>
+      <text x="82" y="995" class="mut"><tspan class="ink" font-weight="700">Source of truth</tspan> — every interaction</text>
+      <circle cx="406" cy="990" r="6" fill="#8a7f78"/>
+      <text x="420" y="995" class="mut"><tspan class="ink" font-weight="700">Bridges</tspan> — redirect to AGENTS.md</text>
+      <circle cx="742" cy="990" r="6" fill="#2E7D74"/>
+      <text x="756" y="995" class="mut"><tspan class="ink" font-weight="700">ai-context layer</tspan> — first interaction</text>
+    </g>
+    <text x="68" y="1024" class="mut" font-size="13">Folder and file names in English; prose inside the files follows the team's language. <tspan class="mono ink" font-weight="700">AGENTS.md</tspan> tells the AI to read the <tspan class="mono ink" font-weight="700">ai-context/</tspan> layer.</text>
+  </svg>
+</div>
+</body>
+</html>
